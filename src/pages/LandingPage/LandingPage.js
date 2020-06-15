@@ -5,6 +5,12 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
 const { Search } = Input;
 
+const Wrapper = styled.div``;
+
+const TopNavWrapper = styled.nav`
+  background-color: #4a56a8;
+`;
+
 const TopNav = styled.ul`
   list-style: none;
   display: flex;
@@ -12,37 +18,55 @@ const TopNav = styled.ul`
   border: 1px solid lightgray;
 `;
 
-const Wrapper = styled.div`
-  background: white;
-  width: 900px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* 그림자 */
-  margin: 0 auto; /* 페이지 중앙 정렬 */
-`;
-
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
   justify-content: space-around;
 `;
 
 const Container = styled.div`
-  width: 900px;
-  height: 800px;
+  width: 1000px;
+  margin: 20px auto 0;
 `;
 
-const ContainerLeft = styled.div`
+const ContainerLeft = styled.section`
+  position: relative;
+  width: 650px;
+  height: 412px;
+  border: 1px solid #ccc;
   display: inline-block;
-  width: 555px;
 `;
 
-const ContainerRight = styled.div`
+const ContainerRight = styled.section`
   float: right;
   width: 336px;
 `;
 
+const LoginWrap = styled.div`
+  position: relative;
+  width: 248px;
+  height: 148px;
+  border: 1px solid #3c4790;
+  color: #333;
+`;
+
+const SearchRangkingWrap = styled.article`
+  position: relative;
+  width: 248px;
+  height: 248px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+`;
+
 const LandingPage = (props) => {
-  const names = ["이모저모", "저모이모", "공구게시판", "구인구직게시판"];
+  const names = [
+    "이모저모",
+    "저모이모",
+    "공구게시판",
+    "자유게시판",
+    "구인구직게시판",
+  ];
   const nameList = names.map((name, index) => (
-    <li key={index} style={{ background: "lightgrey" }}>
+    <li key={index} style={{ color: "#fff" }}>
       {name}
     </li>
   ));
@@ -66,72 +90,77 @@ const LandingPage = (props) => {
             style={{ width: 200 }}
           />
         </Header>
-        <TopNav>{nameList}</TopNav>
+        <TopNavWrapper>
+          <TopNav>{nameList}</TopNav>
+        </TopNavWrapper>
         <Container>
           <ContainerLeft>좌로</ContainerLeft>
           <ContainerRight>
-            <Form
-              name="normal_login"
-              className="login-form"
-              initialValues={{
-                remember: true,
-              }}
-              onFinish={onFinish}
-            >
-              <Form.Item
-                name="username"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your Username!",
-                  },
-                ]}
+            <LoginWrap>
+              <Form
+                name="normal_login"
+                className="login-form"
+                initialValues={{
+                  remember: true,
+                }}
+                onFinish={onFinish}
               >
-                <Input
-                  prefix={<UserOutlined className="site-form-item-icon" />}
-                  placeholder="Username"
-                />
-              </Form.Item>
-              <Form.Item
-                name="password"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your Password!",
-                  },
-                ]}
-              >
-                <Input
-                  prefix={<LockOutlined className="site-form-item-icon" />}
-                  type="password"
-                  placeholder="Password"
-                />
-              </Form.Item>
-              <Form.Item>
-                <Form.Item name="remember" valuePropName="checked" noStyle>
-                  <Checkbox>Remember me</Checkbox>
+                <Form.Item
+                  name="username"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Username!",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix={<UserOutlined className="site-form-item-icon" />}
+                    placeholder="Username"
+                  />
+                </Form.Item>
+                <Form.Item
+                  name="password"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Password!",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix={<LockOutlined className="site-form-item-icon" />}
+                    type="password"
+                    placeholder="Password"
+                  />
+                </Form.Item>
+                <Form.Item>
+                  <Form.Item name="remember" valuePropName="checked" noStyle>
+                    <Checkbox>Remember me</Checkbox>
+                  </Form.Item>
+
+                  <a className="login-form-forgot" href="">
+                    Forgot password
+                  </a>
                 </Form.Item>
 
-                <a className="login-form-forgot" href="">
-                  Forgot password
-                </a>
-              </Form.Item>
-
-              <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="login-form-button"
-                >
-                  로그인
-                </Button>
-                <a href="">회원가입</a>
-              </Form.Item>
-            </Form>
+                <Form.Item>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="login-form-button"
+                  >
+                    로그인
+                  </Button>
+                  <Button onClick={handleClick}>로그아웃</Button>
+                  <a href="">회원가입</a>
+                </Form.Item>
+              </Form>
+            </LoginWrap>
+            <SearchRangkingWrap></SearchRangkingWrap>
           </ContainerRight>
         </Container>
         <div className="footer"></div>
-        <button onClick={handleClick}>로그아웃</button>
       </Wrapper>
     </>
   );
