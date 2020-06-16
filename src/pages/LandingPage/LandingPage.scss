@@ -1,0 +1,50 @@
+.wrapper {
+  .header-center {
+    position: relative;
+    width: 1000px;
+    height: 152px;
+    margin: 0 auto;
+    .maple_logo {
+      position: absolute;
+      top: 32px;
+    }
+  }
+  .navWrap {
+    background-color: #4a56a8;
+    border: 1px solid #3c4790;
+    .topNav {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .container {
+    width: 1000px;
+    margin: 20px auto 0;
+    .container-left {
+      position: relative;
+      width: 650px;
+      height: 432px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    .container-right {
+      float: right;
+      width: 336px;
+      .login-wrap {
+        position: relative;
+        width: 248px;
+        height: 168px;
+        border: 1px solid #3c4790;
+        color: #333;
+      }
+      .search-ranking {
+        position: relative;
+        width: 248px;
+        height: 248px;
+        margin-top: 15px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+}
