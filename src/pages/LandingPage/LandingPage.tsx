@@ -1,9 +1,8 @@
 import React from "react";
-import { Input } from "antd";
 import LoginForm from "./LoginForm";
 import "./LandingPage.scss";
-
-const { Search } = Input;
+import Footer from "./footer/Footer";
+import SearchBox from "./searchbox/SearchBox";
 
 const LandingPage = () => {
   const names = [
@@ -25,11 +24,7 @@ const LandingPage = () => {
         <header>
           <div className="header-center">
             <h1 className="maple_logo">마곡피플</h1>
-            <Search
-              placeholder="input search text"
-              onSearch={(value) => console.log(value)}
-              style={{ position: "absolute", left: "272px", top: "71px" }}
-            />
+            <SearchBox />
           </div>
         </header>
         <div className="navWrap">
@@ -45,8 +40,18 @@ const LandingPage = () => {
             </div>
             <article className="search-ranking"></article>
           </div>
+          <div className="container-down">
+            <div className="container-down-inner-1">1</div>
+            <div className="container-down-inner">2</div>
+            <div className="container-down-inner">3</div>
+          </div>
+          <div className="container-down">
+            <div className="container-down-inner-1">1</div>
+            <div className="container-down-inner">2</div>
+            <div className="container-down-inner">3</div>
+          </div>
         </div>
-        <div className="footer"></div>
+        <Footer />
       </div>
     </>
   );

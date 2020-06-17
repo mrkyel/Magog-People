@@ -1,0 +1,20 @@
+.footer {
+  .footer-nav {
+    height: 30px;
+    background-color: #3a6ae4;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .footer-contents {
+    margin: 20px auto 0;
+    width: 600px;
+    .footer-contents-inner {
+      .copyright {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -46,5 +46,20 @@
         border: 1px solid #ccc;
       }
     }
+    .container-down {
+      margin-top: 20px;
+      padding-bottom: 10px;
+      border: 1px solid #ccc;
+      width: 916px;
+      height: 200px;
+      .container-down-inner {
+        float: left;
+        width: 33%;
+      }
+      .container-down-inner-1 {
+        float: left;
+        width: 32%;
+      }
+    }
   }
 }
