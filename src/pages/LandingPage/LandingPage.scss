@@ -16,6 +16,9 @@
       list-style: none;
       display: flex;
       justify-content: space-around;
+      li {
+        color: #fff;
+      }
     }
   }
   .container {
@@ -35,7 +38,7 @@
         position: relative;
         width: 248px;
         height: 168px;
-        border: 1px solid #3c4790;
+        border: 1px solid #2940d1;
         color: #333;
       }
       .search-ranking {
@@ -43,7 +46,7 @@
         width: 248px;
         height: 248px;
         margin-top: 15px;
-        border: 1px solid #ccc;
+        border: 1px solid #2940d1;
       }
     }
     .container-down {

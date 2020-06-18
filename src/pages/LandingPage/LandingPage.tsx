@@ -1,23 +1,11 @@
 import React from "react";
-import LoginForm from "./LoginForm";
+import LoginForm from "./loginform/LoginForm";
 import "./LandingPage.scss";
 import Footer from "./footer/Footer";
 import SearchBox from "./searchbox/SearchBox";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
-  const names = [
-    "이모저모",
-    "저모이모",
-    "공구게시판",
-    "자유게시판",
-    "구인구직게시판",
-  ];
-  const nameList = names.map((name, index) => (
-    <li key={index} style={{ color: "#fff" }}>
-      {name}
-    </li>
-  ));
-
   return (
     <>
       <div className="wrapper">
@@ -29,7 +17,14 @@ const LandingPage = () => {
         </header>
         <div className="navWrap">
           <nav>
-            <ul className="topNav">{nameList}</ul>
+            <ul className="topNav">
+              <li>이모저모</li>
+              <li>
+                <Link to="/freeboard">자유게시판</Link>
+              </li>
+              <li>공구게시판</li>
+              <li>저모이모</li>
+            </ul>
           </nav>
         </div>
         <div className="container">
