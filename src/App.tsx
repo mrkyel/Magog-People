@@ -6,7 +6,7 @@ import FreeBoard from "pages/FreeBoard/FreeBoard";
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename={"/Magog-People"}>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/register" component={RegisterPage} />
       <Route exact path="/freeboard" component={FreeBoard} />
