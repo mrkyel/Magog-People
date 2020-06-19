@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Magog-People/precache-manifest.fbfc8885ea381dfee81af46df3785d45.js"
+  "/Magog-People/precache-manifest.a23aa712bdfef7f1905b0f5f959c3d33.js"
 );
 
 self.addEventListener('message', (event) => {

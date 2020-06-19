@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "031cf7959a3d5bbc322f6645eb253573",
+    "revision": "afbbc13ec141e31d71598090a3834715",
     "url": "/Magog-People/index.html"
   },
   {
