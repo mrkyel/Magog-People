@@ -1,5 +1,6 @@
 import React from "react";
 import "./RegisterPage.scss";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   return (
@@ -7,7 +8,7 @@ const RegisterPage = () => {
       <div className="form-wrapper">
         <ul>
           <li className="normal-login">
-            <a href="/normarl-register">일반회원으로 가입</a>
+            <Link to="/normal-register">일반회원으로 가입</Link>
           </li>
           <li className="sns-login">
             <a

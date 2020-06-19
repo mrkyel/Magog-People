@@ -1,12 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import LandingPage from "pages/LandingPage/LandingPage";
-import RegisterPage from "pages/RegisterPage/RegisterPage";
-import FreeBoard from "pages/FreeBoard/FreeBoard";
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import LandingPage from 'pages/LandingPage/LandingPage';
+import RegisterPage from 'pages/RegisterPage/RegisterPage';
+import FreeBoard from 'pages/FreeBoard/FreeBoard';
+import NavBar from 'pages/LandingPage/navbar/Navbar';
 
 const App: React.FC = () => {
   return (
-    <Router basename={"/Magog-People"}>
+    <Router basename={'/Magog-People'}>
+      <NavBar />
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/register" component={RegisterPage} />
       <Route exact path="/freeboard" component={FreeBoard} />

@@ -1,0 +1,12 @@
+.navWrap {
+  background-color: #4a56a8;
+  border: 1px solid #3c4790;
+  .topNav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    li {
+      color: #fff;
+    }
+  }
+}

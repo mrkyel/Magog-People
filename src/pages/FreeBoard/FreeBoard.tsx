@@ -84,9 +84,7 @@ const FreeBoard = () => {
           />
         </div>
         <div className="freeboard-searchbar">
-          <form>
-            <SearchBox />
-          </form>
+          <SearchBox />
         </div>
       </div>
     </div>
