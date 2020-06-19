@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Magog-People/static/css/main.78f8bde3.chunk.css",
+    "main.js": "/Magog-People/static/js/main.5c5fdf1e.chunk.js",
+    "main.js.map": "/Magog-People/static/js/main.5c5fdf1e.chunk.js.map",
+    "runtime-main.js": "/Magog-People/static/js/runtime-main.509b7958.js",
+    "runtime-main.js.map": "/Magog-People/static/js/runtime-main.509b7958.js.map",
+    "static/css/2.f47422e6.chunk.css": "/Magog-People/static/css/2.f47422e6.chunk.css",
+    "static/js/2.1f3012ce.chunk.js": "/Magog-People/static/js/2.1f3012ce.chunk.js",
+    "static/js/2.1f3012ce.chunk.js.map": "/Magog-People/static/js/2.1f3012ce.chunk.js.map",
+    "index.html": "/Magog-People/index.html",
+    "precache-manifest.fbfc8885ea381dfee81af46df3785d45.js": "/Magog-People/precache-manifest.fbfc8885ea381dfee81af46df3785d45.js",
+    "service-worker.js": "/Magog-People/service-worker.js",
+    "static/css/2.f47422e6.chunk.css.map": "/Magog-People/static/css/2.f47422e6.chunk.css.map",
+    "static/css/main.78f8bde3.chunk.css.map": "/Magog-People/static/css/main.78f8bde3.chunk.css.map",
+    "static/js/2.1f3012ce.chunk.js.LICENSE.txt": "/Magog-People/static/js/2.1f3012ce.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.509b7958.js",
+    "static/css/2.f47422e6.chunk.css",
+    "static/js/2.1f3012ce.chunk.js",
+    "static/css/main.78f8bde3.chunk.css",
+    "static/js/main.5c5fdf1e.chunk.js"
+  ]
+}
