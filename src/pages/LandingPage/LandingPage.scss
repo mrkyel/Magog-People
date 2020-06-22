@@ -1,56 +1,40 @@
-.wrapper {
-  .header-center {
+.container-left {
+  position: relative;
+  width: 650px;
+  height: 432px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+.container-right {
+  float: right;
+  width: 336px;
+  .login-wrap {
     position: relative;
-    width: 1000px;
-    height: 152px;
-    margin: 0 auto;
-    .maple_logo {
-      position: absolute;
-      top: 50px;
-    }
+    width: 248px;
+    height: 168px;
+    border: 1px solid #2940d1;
+    color: #333;
   }
-  .container {
-    width: 1000px;
-    margin: 20px auto 0;
-    .container-left {
-      position: relative;
-      width: 650px;
-      height: 432px;
-      border: 1px solid #ccc;
-      display: inline-block;
-    }
-    .container-right {
-      float: right;
-      width: 336px;
-      .login-wrap {
-        position: relative;
-        width: 248px;
-        height: 168px;
-        border: 1px solid #2940d1;
-        color: #333;
-      }
-      .search-ranking {
-        position: relative;
-        width: 248px;
-        height: 248px;
-        margin-top: 15px;
-        border: 1px solid #2940d1;
-      }
-    }
-    .container-down {
-      margin-top: 20px;
-      padding-bottom: 10px;
-      border: 1px solid #ccc;
-      width: 916px;
-      height: 200px;
-      .container-down-inner {
-        float: left;
-        width: 33%;
-      }
-      .container-down-inner-1 {
-        float: left;
-        width: 32%;
-      }
-    }
+  .search-ranking {
+    position: relative;
+    width: 248px;
+    height: 248px;
+    margin-top: 15px;
+    border: 1px solid #2940d1;
+  }
+}
+.container-down {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+  width: 916px;
+  height: 200px;
+  .container-down-inner {
+    float: left;
+    width: 33%;
+  }
+  .container-down-inner-1 {
+    float: left;
+    width: 32%;
   }
 }

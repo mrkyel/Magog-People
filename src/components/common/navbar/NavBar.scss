@@ -1,3 +1,13 @@
+.header-center {
+  position: relative;
+  width: 1000px;
+  height: 152px;
+  margin: 0 auto;
+  .maple_logo {
+    position: absolute;
+    top: 50px;
+  }
+}
 .navWrap {
   background-color: #4a56a8;
   border: 1px solid #3c4790;
