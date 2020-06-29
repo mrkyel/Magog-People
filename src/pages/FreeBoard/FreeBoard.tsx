@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './FreeBoard.scss';
 import Button from 'components/atoms/Button';
 import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
 import SearchBox from 'components/atoms/searchbox/SearchBox.js';
+import axios from 'axios';
 
 const FreeBoard = () => {
+  useEffect(() => {
+    console.log('렌더링 완료');
+    axios
+      .get(
+        'http://ec2-3-34-129-2.ap-northeast-2.compute.amazonaws.com:8080/board/v1/select?',
+      )
+      .then((response) => {
+        console.log(response.data);
+      });
+  }, []);
   return (
     <div className="freeboard-wrapper">
       <div className="freeboard-title">자유 게시판</div>
