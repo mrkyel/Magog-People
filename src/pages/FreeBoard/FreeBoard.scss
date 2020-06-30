@@ -6,26 +6,13 @@
   .freeboard-body {
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
-    .freeboard-body-head {
-      display: flex;
-      justify-content: space-around;
-    }
-    .freeboard-body-contents {
-      div {
-        overflow: hidden;
-        padding: 12px 0px 12px 0px;
-        border-top: 1px solid #dedede;
-        ul {
-          margin: 0;
-          list-style: none;
-          display: flex;
-          justify-content: space-around;
-        }
-      }
-    }
   }
   .freeboard-footer {
     margin-top: 10px;
     overflow: hidden;
+  }
+  .freeboard-searchbar {
+    display: flex;
+    justify-content: center;
   }
 }
