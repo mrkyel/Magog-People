@@ -7,6 +7,7 @@ import NavBar from 'components/common/navbar/Navbar';
 import Footer from 'components/common/footer/Footer';
 import Container from 'components/common/container';
 import WriteBoard from 'pages/WriteBoard/WriteBoard';
+import NormalRegister from 'pages/RegisterPage/NormalRegister/NormalRegister';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Container>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/normal-register" component={NormalRegister} />
         <Route exact path="/freeboard" component={FreeBoard} />
         <Route exact path="/writeboard" component={WriteBoard} />
       </Container>

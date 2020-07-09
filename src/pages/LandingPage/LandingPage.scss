@@ -1,15 +1,26 @@
 .container-left {
-  position: relative;
-  width: 650px;
-  height: 432px;
-  border: 1px solid #ccc;
-  display: inline-block;
+  float: left;
+  width: 800px;
+  .container-down {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ccc;
+    height: 200px;
+    .container-down-inner {
+      float: left;
+      width: 33%;
+    }
+    .container-down-inner-1 {
+      float: left;
+      width: 32%;
+    }
+  }
 }
 .container-right {
   float: right;
-  width: 336px;
+  width: 250px;
   .login-wrap {
-    position: relative;
+    margin-top: 20px;
     width: 248px;
     height: 168px;
     border: 1px solid #2940d1;
@@ -21,20 +32,5 @@
     height: 248px;
     margin-top: 15px;
     border: 1px solid #2940d1;
-  }
-}
-.container-down {
-  margin-top: 20px;
-  padding-bottom: 10px;
-  border: 1px solid #ccc;
-  width: 916px;
-  height: 200px;
-  .container-down-inner {
-    float: left;
-    width: 33%;
-  }
-  .container-down-inner-1 {
-    float: left;
-    width: 32%;
   }
 }

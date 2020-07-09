@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const StyledButton = styled.button`
   border: none;
@@ -11,7 +11,8 @@ const StyledButton = styled.button`
   outline: none;
   cursor: pointer;
   background: #0c348e;
-  float: ${(props) => (props.left ? "left" : "right")};
+  float: ${(props) => (props.left ? 'left' : 'right')};
+  margin-top: 10px;
 `;
 
 const Button = (props) => <StyledButton {...props} />;

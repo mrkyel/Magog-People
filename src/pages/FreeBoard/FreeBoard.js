@@ -63,6 +63,13 @@ const FreeBoard = () => {
       <div className="freeboard-title">자유 게시판</div>
       <div className="freeboard-body">
         <Table
+          onRow={(record, rowIndex) => {
+            return {
+              onClick: (event) => {
+                alert(event);
+              },
+            };
+          }}
           columns={columns}
           dataSource={data}
           pagination={{
