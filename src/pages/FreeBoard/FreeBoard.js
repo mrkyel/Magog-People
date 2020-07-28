@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './FreeBoard.scss';
 import Button from 'components/atoms/Button';
 import { Table, Input } from 'antd';
 import 'antd/dist/antd.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Modal from 'antd/lib/modal/Modal';
 const { Search } = Input;
 
 const FreeBoard = () => {
+  const [visible, setVisible] = useState(false);
+  const [viewCount, setViewCount] = useState(0);
   // useEffect(() => {
   //   console.log('렌더링 완료');
   //   axios
@@ -22,7 +25,7 @@ const FreeBoard = () => {
     {
       title: '번호',
       dataIndex: 'number',
-      width: 150,
+      width: 100,
     },
     {
       title: '제목',
@@ -48,16 +51,34 @@ const FreeBoard = () => {
   ];
 
   const data = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 11; i > 1; i--) {
     data.push({
       key: i,
-      number: i + 1,
+      number: i - 1,
       title: '게시판 연습중',
       writer: `Edward King ${i}`,
       like: 32,
+      views: viewCount,
       regDt: '2020-06-30',
     });
   }
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setVisible(false);
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
+  };
+
+  const increaseViewCount = () => {
+    setViewCount(viewCount + 1);
+  };
+
   return (
     <div className="freeboard-wrapper">
       <div className="freeboard-title">자유 게시판</div>
@@ -65,8 +86,9 @@ const FreeBoard = () => {
         <Table
           onRow={(record, rowIndex) => {
             return {
-              onClick: (event) => {
-                alert(event);
+              onClick: () => {
+                showModal();
+                increaseViewCount();
               },
             };
           }}
@@ -81,6 +103,14 @@ const FreeBoard = () => {
           }}
           size="small"
         />
+        <Modal
+          title="Basic Modal"
+          visible={visible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>모달 테스트</p>
+        </Modal>
       </div>
       <div className="freeboard-footer">
         <Link to="/writeboard">

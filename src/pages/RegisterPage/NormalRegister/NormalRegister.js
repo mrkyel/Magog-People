@@ -29,6 +29,7 @@ const NormalRegister = () => {
         name="nest-messages"
         onFinish={onFinish}
         validateMessages={validateMessages}
+        style={{ width: '750px' }}
       >
         <Form.Item
           name={['user', 'name']}

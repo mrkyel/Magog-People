@@ -27,7 +27,7 @@
     "redux": "^4.0.5",
     "typescript": "^3.9.5"
   },
-  "homepage": "https://mrkyel.github.io/Magog-People",
+  "homepage": "https://mrkyel.github.io/MGPP",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

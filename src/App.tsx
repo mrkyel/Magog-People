@@ -8,10 +8,11 @@ import Footer from 'components/common/footer/Footer';
 import Container from 'components/common/container';
 import WriteBoard from 'pages/WriteBoard/WriteBoard';
 import NormalRegister from 'pages/RegisterPage/NormalRegister/NormalRegister';
+import './App.css';
 
 const App: React.FC = () => {
   return (
-    <Router basename={'/Magog-People'}>
+    <Router basename={'/MGPP'}>
       <NavBar />
       <Container>
         <Route exact path="/" component={LandingPage} />
