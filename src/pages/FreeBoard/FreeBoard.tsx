@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './FreeBoard.scss';
 import Button from 'components/atoms/Button';
 import { Pagination } from 'antd';
@@ -6,80 +6,61 @@ import 'antd/dist/antd.css';
 import SearchBox from 'components/atoms/searchbox/SearchBox.js';
 import axios from 'axios';
 
+function createDummy () {
+  const dummyData = [];
+  for (let i = 1; i < 300; i++) {
+    dummyData.push({
+      id: i,
+      title: `제목${i}`,
+      writer: `작성자${i}`,
+      count: 0,
+      regDt: '2020-10-25'
+    })
+  }
+  return dummyData;
+}
+
 const FreeBoard = () => {
+  const [data, setData] = useState(createDummy);
+  const category = ['번호','제목', '작성자', '조회', '등록일'];
   useEffect(() => {
-    console.log('렌더링 완료');
-    axios
-      .get(
-        'http://ec2-3-34-129-2.ap-northeast-2.compute.amazonaws.com:8080/board/v1/select?',
-      )
-      .then((response) => {
-        console.log(response.data);
-      });
+    // console.log('렌더링 완료');
+    // axios
+    //   .get(
+    //     'http://ec2-3-34-129-2.ap-northeast-2.compute.amazonaws.com:8080/board/v1/select?',
+    //   )
+    //   .then((response) => {
+    //     console.log(response.data);
+    //   });
+    createDummy();
   }, []);
   return (
     <div className="freeboard-wrapper">
       <div className="freeboard-title">자유 게시판</div>
       <div className="freeboard-body">
         <div className="freeboard-body-head">
-          <span>번호</span>
-          <span>제목</span>
-          <span>작성자</span>
-          <span>공감</span>
-          <span>조회</span>
-          <span>등록일</span>
+          {
+            category.map(el=> 
+              <span>{el}</span>
+            )
+          }
         </div>
         <div className="freeboard-body-contents">
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-            </ul>
-          </div>
+              {
+                data.map(el => 
+                  <>
+                  <div>
+                    <ul>
+                  <li>{el.id}</li>
+                  <li>{el.title}</li>
+                  <li>{el.writer}</li>
+                  <li>{el.count}</li>
+                  <li>{el.regDt}</li>
+                    </ul>
+                  </div>
+                  </>
+                )
+              }
         </div>
       </div>
       <div className="freeboard-footer">
@@ -87,7 +68,7 @@ const FreeBoard = () => {
       </div>
       <div className="freeboard-paging">
         <Pagination
-          total={85}
+          total={data.length}
           showSizeChanger
           showQuickJumper
           showTotal={(total) => `Total ${total} items`}
