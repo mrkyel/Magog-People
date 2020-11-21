@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBox from '../../atoms/searchbox/SearchBox';
 import './NavBar.scss';
+import { Input } from 'antd';
+const { Search } = Input;
 
 const NavBar = () => {
   return (
@@ -11,7 +12,12 @@ const NavBar = () => {
           <h1 className="maple_logo">
             <Link to="/">마-피</Link>
           </h1>
-          <SearchBox />
+          <Search
+            placeholder="검색어를 입력하세요"
+            onSearch={(value) => console.log(value)}
+            enterButton
+            style={{ width: '30%' }}
+          />
         </div>
       </header>
       <div className="navWrap">

@@ -3,14 +3,13 @@ import './FreeBoard.scss';
 import Button from 'components/atoms/Button';
 import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
-import SearchBox from 'components/atoms/searchbox/SearchBox.js';
 import axios from 'axios';
 
 function createDummy () {
-  const dummyData = [];
+  const dummyData = [] as any;
   for (let i = 1; i < 300; i++) {
     dummyData.push({
-      id: i,
+      id: `${i}`,
       title: `제목${i}`,
       writer: `작성자${i}`,
       count: 0,
@@ -75,7 +74,6 @@ const FreeBoard = () => {
         />
       </div>
       <div className="freeboard-searchbar">
-        <SearchBox />
       </div>
     </div>
   );
