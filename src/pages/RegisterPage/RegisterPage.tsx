@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./RegisterPage.scss";
 import { Link } from "react-router-dom";
+import { Button } from "antd";
+
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
+
+const { Kakao } = window;
 
 const RegisterPage = () => {
+
+  const kakaoLoginClickHandler = () => {
+    console.log(Kakao.Auth.login({
+      success: (auth) => {
+        console.log(auth)
+      },
+      fail: (err) => {
+        console.log(err)
+      }
+    }))
+  }
+
   return (
     <form>
       <div className="form-wrapper">
@@ -11,16 +32,13 @@ const RegisterPage = () => {
             <Link to="/normal-register">일반회원으로 가입</Link>
           </li>
           <li className="sns-login">
-            <a
-              href="https://kauth.kakao.com/oauth/authorize?client_id=770b249e43c567d7c518187be78e9147&redirect_uri=https%3A%2F%2Fwww.ppomppu.co.kr%2Fopenapi%2Fsocial%2Flogin.php&response_type=code&state=kakao%7C%7CW3n2LcVSR%252BBF4O%252FmEDGNCzS0Hb%252BItbvo7yBcL3o9hj5SYt3lQBPwyqNK4bT7UX87IJNpY2ObAoKnTeDw3IMMsCU%252Bvj8csdXP9dpc%252BvZbHYw%253D&encode_state=false"
-              style={{ background: "#ffd632" }}
-            >
+            <Button onClick={kakaoLoginClickHandler} style={{ background: "#ffd632" }}>
               <img
                 src={require("media/icons/Login_kakao.png")}
                 alt="kakao-logo"
               />
-              <span>카카오 계정으로 회원가입</span>
-            </a>
+              <span>카카오 계정으로 로그인</span>
+            </Button>
             <a
               href="https://www.facebook.com/v2.12/dialog/oauth?client_id=179876179410019&redirect_uri=https%3A%2F%2Fwww.ppomppu.co.kr%2Fopenapi%2Fsocial%2Flogin.php&state=facebook%7C%7CDFXhU14w5EWK0Pzi0tuTshmnwo4tUYf6qcwLWvp4vuLYzpShC9yJyymY567pvgWmwMtGloOqTZNgaBBalgZHucLa1qvgjQ5B2De6YaRjcZY%253D"
               style={{ background: "#3155af" }}
