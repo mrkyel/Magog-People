@@ -1,4 +1,7 @@
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   .footer-nav {
     height: 30px;
     background-color: #3a6ae4;
@@ -9,8 +12,12 @@
     }
   }
   .footer-contents {
-    margin: 20px auto 0;
-    width: 600px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    margin: 5px;
+    width: 100%;
+    background: white;
     .footer-contents-inner {
       .copyright {
         font-size: 12px;
