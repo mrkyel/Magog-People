@@ -10,7 +10,7 @@ declare global {
 
 const { Kakao } = window;
 
-const RegisterPage = () => {
+const RegisterPage: React.FC = () => {
   const kakaoLoginClickHandler = () => {
     console.log(
       Kakao.Auth.login({
